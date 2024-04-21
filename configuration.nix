@@ -132,6 +132,7 @@
      swaynotificationcenter
      pavucontrol
      signal-desktop
+     davinci-resolve
   ];
 
   programs.zsh.enable = true;
