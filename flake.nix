@@ -13,8 +13,16 @@
 			system = "x86_64-linux";
 			modules = [
 				./configuration.nix
+				./machines/beanmachine.nix
 				home-manager.nixosModules.home-manager
-				./home-manager/home-manager.nix
+			];
+		};
+		nixosConfigurations.bl-lab = nixpkgs.lib.nixosSystem {
+			system = "x86_64-linux";
+			modules = [
+				./configuration.nix
+				./machines/bl-lab.nix
+				home-manager.nixosModules.home-manager
 			];
 		};
 	};
