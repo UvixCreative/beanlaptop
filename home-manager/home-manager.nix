@@ -2,6 +2,6 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.ben = import ./ben/home.nix;
+    users.bean = import ./bean/home.nix;
   };
 }
