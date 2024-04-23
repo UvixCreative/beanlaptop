@@ -11,9 +11,7 @@
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
 
   # Polkit
   security.polkit.enable = true;
@@ -97,13 +95,13 @@
   services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.ben = {
+  users.users.bean = {
     isNormalUser = true;
     description = "Ben Rankin";
     extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
     packages = with pkgs; [
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   # Allow unfree packages
@@ -135,7 +133,7 @@
      davinci-resolve
   ];
 
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
