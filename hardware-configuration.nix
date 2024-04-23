@@ -1,1 +1,0 @@
-machines/lab-vm.nix
