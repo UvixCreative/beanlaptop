@@ -50,7 +50,7 @@ in rec {
   modes = {
     ${mode_system} = {
       l = "exec ${screenlock}; mode default";
-      e = "swaymsg exit; mode default";
+      e = "exit; mode default";
       r = "exec systemctl reboot; mode default";
       s = "exec systemctl suspend; mode default";
       "shift+s" = "exec systemctl poweroff; mode default";
@@ -77,6 +77,8 @@ in rec {
       "${modifier}+s" = "exec ${screenshot_full_clipboard}";
 
       "${modifier}+Shift+e" = "mode \"${mode_system}\"";
+
+      "${modifier}+b" = "exec 'pkill waybar || waybar'"; # Toggle bar
 
       "XF86MonBrightnessDown" = "exec light -U 10";
       "XF86MonBrightnessUp" = "exec light -A 10";

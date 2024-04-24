@@ -5,7 +5,7 @@
     height = 30;
     spacing = 4;
     modules-left = [ "sway/workspaces" "sway/mode" ];
-    modules-center = [ ];
+    modules-center = [ "sway/window" ];
     modules-right = [ "tray" "network" "bluetooth" "cpu" "memory" "battery" "pulseaudio" "clock" ];
 
     "sway/mode" = {
