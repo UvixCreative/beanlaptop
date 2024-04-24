@@ -89,6 +89,7 @@ in rec {
 
   # Startup
   startup = [
+    { command = "krunner -d" ;}
     { command = "firefox" ;}
     { command = "discord" ;}
     { command = "/user/libexec/polkit-gnome-authentication-agent-1" ;}
