@@ -1,3 +1,4 @@
+
 { lib, ... }:
 let
   screenlock = "swaylock -f -l -c 000000";
@@ -28,14 +29,14 @@ in rec {
       background = "#344e41";
       border = "#588157";
       childBorder = "#3a5a40";
-      indicator = "#ff0000";
+      indicator = "#00ff00";
       text = "#dad7cd";
     };
     unfocused = {
       background = "#3a5a40";
       border = "#3a5a40";
       childBorder = "#588157";
-      indicator = "#ff0000";
+      indicator = "#00ff00";
       text = "#dad7cd";
     };
   };
