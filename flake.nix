@@ -6,15 +6,17 @@
                         url = "github:nix-community/home-manager";
                         inputs.nixpkgs.follows = "nixpkgs";
                 };
+		nix-flatpak.url = "github:gmodena/nix-flatpak";
         };
 
-        outputs = inputs@{ nixpkgs, home-manager, ... }: {
+        outputs = inputs@{ nixpkgs, home-manager, nix-flatpak ... }: {
 		nixosConfigurations.beanmachine = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
 				./configuration.nix
 				./machines/beanmachine.nix
 				home-manager.nixosModules.home-manager
+				nix-flatpak.nixosModules.nix-flatpak
 			];
 		};
 		nixosConfigurations.bl-lab = nixpkgs.lib.nixosSystem {
@@ -23,6 +25,7 @@
 				./configuration.nix
 				./machines/bl-lab.nix
 				home-manager.nixosModules.home-manager
+				nix-flatpak.nixosModules.nix-flatpak
 			];
 		};
 	};
