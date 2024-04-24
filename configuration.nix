@@ -55,6 +55,11 @@
 
   programs.light.enable = true;
 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
