@@ -18,6 +18,10 @@
       format = " {icon} ";
     };
 
+    "sway/window" = {
+      on-click = "krunner";
+    };
+
     "tray" = {
       spacing = 5;
     };
