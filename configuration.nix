@@ -53,8 +53,6 @@
     };
   };
 
-  qt.style = "adwaita-dark";
-
   programs.light.enable = true;
 
   # Enable the X11 windowing system.

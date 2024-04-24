@@ -24,4 +24,10 @@
     settings = import ./waybar.nix;
     style = ./waybar.css;
   };
+
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
 }
