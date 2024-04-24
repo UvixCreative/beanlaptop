@@ -25,9 +25,17 @@
     style = ./waybar.css;
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome.gnome-themes-extra;
+    };
+  };
+
   qt = {
     enable = true;
     platformTheme = "gnome";
-    style = "adwaita-dark";
+    style.name = "adwaita-dark";
   };
 }
