@@ -31,6 +31,7 @@
         on-scroll = 1;
         on-click-right = "mode";
       };
+      on-click = "swaync-client -t -sw";
     };
 
     "cpu" = {
