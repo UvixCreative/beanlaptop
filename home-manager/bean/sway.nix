@@ -68,6 +68,8 @@ in rec {
   keybindings =
     lib.mkOptionDefault {
       "${modifier}+q" = "kill";
+      "${modifier}+o" = "move container to output left";
+      "${modifier}+p" = "move container to output right";
       "${modifier}+space" = "exec ${menu}";
       "${modifier}+n" = "exec 'swaync-client -t -sw'";
 
