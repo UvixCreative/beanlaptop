@@ -20,6 +20,7 @@ in rec {
   gaps.smartGaps = true;
   window = {
     border = 2;
+    titlebar = false;
   };
 
   colors = {
