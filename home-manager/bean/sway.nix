@@ -6,6 +6,14 @@ let
 
   screenshot_selected_area_clipboard = "slurp | grim -g- - | wl-copy";
   screenshot_full_clipboard = "grim - | wl-copy";
+
+  theme = {
+    focus_green = "#588158";
+    unfocus_green = "374f2f";
+    focusinactive_green = "#466946";
+    text = "#dad7cd";
+    indicator = "#77fc77";
+  };
 in rec {
   modifier = "Mod4";
   terminal = "kitty";
@@ -16,8 +24,8 @@ in rec {
     bg = "${./wallpaper.jpg} fill";
   };
   menu = "krunner";
-  gaps.outer = 2;
-  gaps.inner = 2;
+  gaps.outer = 0;
+  gaps.inner = 0;
   gaps.smartGaps = true;
   window = {
     border = 2;
@@ -25,23 +33,30 @@ in rec {
   };
 
   colors = {
-    focused = {
-      background = "#344e41";
-      border = "#588157";
-      childBorder = "#3a5a40";
-      indicator = "#00ff00";
-      text = "#dad7cd";
-    };
     unfocused = {
-      background = "#3a5a40";
-      border = "#3a5a40";
-      childBorder = "#588157";
-      indicator = "#00ff00";
-      text = "#dad7cd";
+      background = theme.unfocus_green;
+      border = theme.unfocus_green;
+      childBorder = theme.unfocus_green;
+      indicator = theme.indicator;
+      text = theme.text;
+    };
+    focused = {
+      background = theme.focus_green;
+      border = theme.focus_green;
+      childBorder = theme.focus_green;
+      indicator = theme.indicator;
+      text = theme.text;
+    };
+    focusedInactive = {
+      background = theme.focusinactive_green;
+      border = theme.focusinactive_green;
+      childBorder = theme.unfocus_green;
+      indicator = theme.indicator;
+      text = theme.text;
     };
   };
 
-  defaultWorkspace = "workspace 1";
+  defaultWorkspace = "workspace number 1";
 
   floating.criteria = [
     { title = "Picture-in-Picture" ;}
@@ -72,6 +87,8 @@ in rec {
       "${modifier}+q" = "kill";
       "${modifier}+o" = "move container to output left";
       "${modifier}+p" = "move container to output right";
+      "${modifier}+t" = "sticky toggle";
+
       "${modifier}+space" = "exec ${menu}";
       "${modifier}+n" = "exec 'swaync-client -t -sw'";
 
@@ -95,12 +112,12 @@ in rec {
 
   # Startup
   startup = [
-    { command = "krunner -d" ;}
-    { command = "firefox" ;}
-    { command = "discord" ;}
+    { command = "krunner -d" ; always=true ;}
     { command = "/user/libexec/polkit-gnome-authentication-agent-1" ;}
     { command = "systemctl --user import-environment"; always=true ;}
     { command = "swaync --style /etc/sway/swaync/style.css --config /etc/sway/swaync/config.json"; always=true ;}
     { command = "swayrd" ; always=true ;}
+    { command = "firefox" ;}
+    { command = "discord" ;}
   ];
 }
