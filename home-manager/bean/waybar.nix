@@ -1,4 +1,6 @@
-{
+let 
+  pa_toggle_popup = "swaymsg [app_id='pa_popup'] focus && swaymsg kill || pavucontrol --name=pa_popup & sleep 0.5 && swaymsg [app_id='pa_popup'] focus && swaymsg resize set 30 ppt 30 ppt && swaymsg move position 70 ppt 0";
+in {
   mainBar = {
     layer = "top";
     position = "top";
@@ -56,12 +58,9 @@
     };
 
     "pulseaudio" = {
-      format = "{volume}% {icon} {format_source}";
-      format-bluetooth = "{volume}% {icon} {format_source}";
-      format-bluetooth-muted = " {icon} {format_source}";
-      format-muted = " {format_source}";
-      format-source = "{volume}% ";
-      format-source-muted = "";
+      format = "{volume}% {icon}";
+      format-bluetooth = "{volume}% {icon}";
+      format-bluetooth-muted = " {icon}";
       format-icons = {
         headphone = "";
         hands-free = "";
@@ -71,7 +70,7 @@
           car = "";
           default = ["" "" ""];
      };
-     on-click = "pavucontrol";
+     on-click = pa_toggle_popup;
     };
   };
 }

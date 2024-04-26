@@ -60,7 +60,7 @@ in rec {
 
   floating.criteria = [
     { title = "Picture-in-Picture" ;}
-    { app_id="pavucontrol" ;}
+    { app_id="pa_popup" ;}
   ];
 
   # System mode menu (poweroff, suspend, etc)
