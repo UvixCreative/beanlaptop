@@ -3,7 +3,7 @@
     version = "2024-04-27";
   in [(
     final: prev: {
-      swayfx-unwrapped = prev.swayfx.overrideAttrs (oldAttrs: {
+      swayfx-unwrapped = prev.swayfx-unwrapped.overrideAttrs (oldAttrs: {
         inherit version;
         src = prev.fetchFromGitHub {
           owner = "WillPower3309";
