@@ -24,8 +24,8 @@ in rec {
     bg = "${./wallpaper.jpg} fill";
   };
   menu = "krunner";
-  gaps.outer = 0;
-  gaps.inner = 0;
+  gaps.outer = 4;
+  gaps.inner = 4;
   gaps.smartGaps = true;
   window = {
     border = 2;
