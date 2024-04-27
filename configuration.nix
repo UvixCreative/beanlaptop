@@ -10,6 +10,8 @@
       ./home-manager/home-manager.nix
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
 
@@ -46,6 +48,7 @@
   # Enable Sway WM
   programs.sway = {
     enable = true;
+#    package = pkgs.swayfx;
     wrapperFeatures = {
       gtk = true;
       base = true;
