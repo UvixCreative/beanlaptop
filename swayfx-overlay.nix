@@ -5,7 +5,7 @@
     final: prev: {
       swayfx-unwrapped = prev.swayfx.overrideAttrs (oldAttrs: {
         inherit version;
-        src = super.fetchFromGitHub {
+        src = prev.fetchFromGitHub {
           owner = "WillPower3309";
           repo = "swayfx";
           rev = "a5a69d4d4e9a8fe306e27ca46cde3a8b9d312ae3";
