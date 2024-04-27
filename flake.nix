@@ -22,6 +22,7 @@
 		nixosConfigurations.bl-lab = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
+				(import ./swayfx-overlay.nix)
 				./configuration.nix
 				./machines/bl-lab.nix
 				home-manager.nixosModules.home-manager
