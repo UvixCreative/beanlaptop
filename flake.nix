@@ -20,6 +20,9 @@
 				./machines/beanmachine.nix
 				home-manager.nixosModules.home-manager
 				nix-flatpak.nixosModules.nix-flatpak
+				({...}: {nixpkgs.overlays = [
+					swayfx.overlays.default
+				];})
 			];
 		};
 		nixosConfigurations.bl-lab = nixpkgs.lib.nixosSystem {
