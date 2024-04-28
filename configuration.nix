@@ -139,6 +139,7 @@
      pavucontrol
      signal-desktop
      davinci-resolve
+     rawtherapee
      nextcloud-client
   ];
 
