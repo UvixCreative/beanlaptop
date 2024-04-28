@@ -119,5 +119,6 @@ in rec {
     { command = "swayrd" ; always=true ;}
     { command = "firefox" ;}
     { command = "discord" ;}
+    { command = "nextcloud" ;}
   ];
 }
