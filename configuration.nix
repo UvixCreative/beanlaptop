@@ -165,7 +165,7 @@
     ports = [ 1803 ];
   };
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 1803, ... ];
+  networking.firewall.allowedTCPPorts = [ 1803 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
