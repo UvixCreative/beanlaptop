@@ -61,6 +61,7 @@ in rec {
   floating.criteria = [
     { title = "Picture-in-Picture" ;}
     { app_id="pa_popup" ;}
+    { app_id="com.nextcloud.desktopclient.nextcloud" ;}
   ];
 
   # System mode menu (poweroff, suspend, etc)
