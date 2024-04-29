@@ -118,6 +118,7 @@ in rec {
     { command = "systemctl --user import-environment"; always=true ;}
     { command = "swaync --style /etc/sway/swaync/style.css --config /etc/sway/swaync/config.json"; always=true ;}
     { command = "swayrd" ; always=true ;}
+    { command = "kwalletd5" ; always=true ;}
     { command = "firefox" ;}
     { command = "discord" ;}
     { command = "nextcloud" ;}
