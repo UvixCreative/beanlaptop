@@ -141,6 +141,7 @@
      davinci-resolve
      rawtherapee
      nextcloud-client
+     calibre
   ];
 
   services.flatpak.packages = [

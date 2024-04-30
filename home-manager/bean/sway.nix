@@ -57,6 +57,10 @@ in rec {
   };
 
   defaultWorkspace = "workspace number 1";
+  workspaceOutputAssign = [
+    { output = "DP-1"; workspace = "10" ; }
+    { output = "DP-2"; workspace = "1" ; }
+  ];
 
   floating.criteria = [
     { title = "Picture-in-Picture" ;}
