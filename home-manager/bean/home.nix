@@ -26,7 +26,7 @@
 title_align center
 corner_radius 10
 smart_corner_radius enable
-default_dim_inactive 0.3
+default_dim_inactive 0.1
 '';
   };
 
