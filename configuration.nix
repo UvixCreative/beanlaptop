@@ -142,6 +142,7 @@
      rawtherapee
      nextcloud-client
      calibre
+     chromium
   ];
 
   services.flatpak.packages = [
