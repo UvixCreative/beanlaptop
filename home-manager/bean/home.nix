@@ -16,7 +16,7 @@
 
   wayland.windowManager.sway = {
     enable = true;
-#    package = pkgs.swayfx;
+    package = pkgs.swayfx;
     wrapperFeatures = {
       base = true;
       gtk = true;
@@ -24,9 +24,9 @@
     config = import ./sway.nix;
     extraConfig = ''
 title_align center
-#corner_radius 10
-#smart_corner_radius enable
-#default_dim_inactive 0.3
+corner_radius 10
+smart_corner_radius enable
+default_dim_inactive 0.3
 '';
   };
 

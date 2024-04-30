@@ -59,6 +59,9 @@ in rec {
   defaultWorkspace = "workspace number 1";
   workspaceOutputAssign = [
     { output = "DP-1"; workspace = "10" ; }
+    { output = "DP-1"; workspace = "9" ; }
+    { output = "DP-1"; workspace = "8" ; }
+    { output = "DP-1"; workspace = "7" ; }
     { output = "DP-2"; workspace = "1" ; }
   ];
 
@@ -125,6 +128,6 @@ in rec {
     { command = "kwalletd5" ; always=true ;}
     { command = "firefox" ;}
     { command = "discord" ;}
-    { command = "nextcloud" ;}
+    { command = "nextcloud --background" ;}
   ];
 }
