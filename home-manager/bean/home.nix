@@ -24,7 +24,7 @@
     config = import ./sway.nix;
     extraConfig = ''
 title_align center
-corner_radius 10
+corner_radius 15
 smart_corner_radius enable
 default_dim_inactive 0.1
 '';
