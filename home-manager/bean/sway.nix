@@ -105,8 +105,7 @@ in rec {
   keybindings =
     lib.mkOptionDefault {
       "${modifier}+q" = "kill";
-      "${modifier}+o" = "move container to output left";
-      "${modifier}+p" = "move container to output right";
+      "${modifier}+o" = "move container to output left; focus output left";
       "${modifier}+t" = "sticky toggle";
 
       "${modifier}+space" = "exec ${menu}";
