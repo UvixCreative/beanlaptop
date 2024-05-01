@@ -30,6 +30,7 @@ in rec {
   };
   output."*" = {
     bg = "${./wallpaper.jpg} fill";
+    adaptive_sync = "on";
   };
   menu = "krunner";
   gaps.outer = 4;
