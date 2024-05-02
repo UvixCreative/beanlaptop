@@ -72,5 +72,9 @@ in {
      };
      on-click = pa_toggle_popup;
     };
+
+    "bluetooth" = {
+      on-click = "plasma-open-settings kcm_bluetooth";
+    };
   };
 }
