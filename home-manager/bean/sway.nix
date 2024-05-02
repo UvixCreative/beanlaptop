@@ -42,6 +42,7 @@ in rec {
       drag = "enabled";
       tap = "enabled";
       dwt = "enabled";
+      tap_button_map = "lrm";
     };
   };
   menu = "krunner";
