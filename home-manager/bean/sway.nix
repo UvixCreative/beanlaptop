@@ -25,12 +25,24 @@ let
 in rec {
   modifier = "Mod4";
   terminal = "kitty";
-  output.Virtual-1 = {
-    mode = "1920x1080@60Hz";
+  output = {
+    "*" = {
+      bg = "${./wallpaper.jpg} fill";
+      adaptive_sync = "on";
+    };
+    eDP-2 = {
+      scale = "1.5";
+    };
   };
-  output."*" = {
-    bg = "${./wallpaper.jpg} fill";
-    adaptive_sync = "on";
+  input = {
+    "2362:628:PIXA3854:00_093A:0274_Touchpad" = {
+      pointer_accel = "0.3";
+      scroll_factor = "0.5";
+      natural_scroll = "enabled";
+      drag = "enabled";
+      tap = "enabled";
+      dwt = "enabled";
+    };
   };
   menu = "krunner";
   gaps.outer = 4;

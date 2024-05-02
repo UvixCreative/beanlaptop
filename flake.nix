@@ -7,15 +7,15 @@
                         inputs.nixpkgs.follows = "nixpkgs";
                 };
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
-		swayfx = {
-			url = "github:WillPower3309/swayfx";
-		};
+		swayfx.url = "github:WillPower3309/swayfx";
+                nixos-hardware.url = "github:NixOS/nixos-hardware";
         };
 
-        outputs = inputs@{ nixpkgs, home-manager, nix-flatpak, swayfx, ... }: {
+        outputs = inputs@{ nixpkgs, home-manager, nix-flatpak, nixos-hardware, swayfx, ... }: {
 		nixosConfigurations.beanmachine = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
+				nixos-hardware.nixosModules.framework-16-7040-amd
 				./configuration.nix
 				./machines/beanmachine.nix
 				home-manager.nixosModules.home-manager
