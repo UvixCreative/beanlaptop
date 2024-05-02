@@ -11,11 +11,15 @@
     source = ./wallpaper.jpg;
   };
 
+  wayland.windowManager.sway.enable = true;
   programs.home-manager.enable = true;
   programs.swayr.enable = true;
+  services.swayidle.enable = true;
+  programs.waybar.enable = true;
+  gtk.enable = true;
+  qt.enable = true;
 
   wayland.windowManager.sway = {
-    enable = true;
     package = pkgs.swayfx;
     wrapperFeatures = {
       base = true;
@@ -31,13 +35,11 @@ default_dim_inactive 0.1
   };
 
   programs.waybar = {
-    enable = true;
     settings = import ./waybar.nix;
     style = ./waybar.css;
   };
 
   gtk = {
-    enable = true;
     theme = {
       name = "Adwaita-dark";
       package = pkgs.gnome.gnome-themes-extra;
@@ -45,7 +47,6 @@ default_dim_inactive 0.1
   };
 
   qt = {
-    enable = true;
     platformTheme = "gnome";
     style.name = "adwaita-dark";
   };
