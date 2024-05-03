@@ -55,7 +55,15 @@
     };
   };
 
-  hardware.opengl.enable = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport.enable = true;
+    extraPackages = with pkgs; [
+      vaapiVdpau
+      libvdpau-va-gl
+      amdvlk
+    ];
+  };
 
   programs.light.enable = true;
 
