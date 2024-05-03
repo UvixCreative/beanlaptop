@@ -35,7 +35,7 @@ in rec {
     };
   };
   input = {
-    "2362:628:PIXA3854:00_093A:0274_Touchpad" = {
+    "type:touchpad" = {
       pointer_accel = "0.3";
       scroll_factor = "0.5";
       natural_scroll = "enabled";
