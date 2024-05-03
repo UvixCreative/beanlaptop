@@ -55,6 +55,8 @@
     };
   };
 
+  hardware.opengl.enable = true;
+
   programs.light.enable = true;
 
   programs.steam = {
