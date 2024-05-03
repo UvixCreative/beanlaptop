@@ -58,7 +58,6 @@
   programs.light.enable = true;
 
   programs.steam = {
-    enable = true;
     remotePlay.openFirewall = true;
   };
 
@@ -152,6 +151,7 @@
 
   services.flatpak.packages = [
     "app.bluebubbles.BlueBubbles"
+    "com.valvesoftware.Steam"
   ];
 
   programs.fish.enable = true;
