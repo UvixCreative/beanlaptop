@@ -50,8 +50,9 @@ title_align center
     style.name = "adwaita-dark";
   };
 
-  wayland.windowManager.sway.enable = true;
   programs.home-manager.enable = true;
+  wayland.windowManager.sway.enable = true;
+  services.kdeconnect.enable = true;
   programs.swayr.enable = true;
   services.swayidle.enable = true;
   programs.waybar.enable = true;
