@@ -29,11 +29,12 @@ title_align center
 
   services.swayidle = {
     events = [
-      { event = "lock"; command = "${pkgs.swaylock}/bin/swaylock -f -l -c 000000" ; }
       { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock -f -l -c 000000" ; }
     ];
     timeouts = [
-      { timeout = 60; command = "${pkgs.swaylock}/bin/swaylock -f -l -c 000000" ; } # one minute
+      { timeout = 60; command = "${pkgs.light}/bin/light -O; ${pkgs.light}/bin/light -S 0"; resumeCommand = "${pkgs.light}/bin/light -I"; } # one minute, dim
+      { timeout = 120; command = "${pkgs.sway}/bin/sway output '*' power off"; resumeCommand = "${pkgs.sway}/bin/sway output '*' power on"; } # 2 minutes display off
+      { timeout = 125; command = "${pkgs.swaylock}/bin/swaylock -f -l -c 000000" ; } # after 5s display off, lock
       { timeout = 600; command = "systemctl suspend" ; } # ten minutes
     ];
   };
