@@ -31,7 +31,7 @@ in rec {
       adaptive_sync = "on";
     };
     eDP-2 = {
-      scale = "1.5";
+      scale = "1.35";
     };
   };
   input = {
