@@ -8,11 +8,13 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  # == Boot/kernel modules ==
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "sr_mod" "thunderbolt" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  # == Filesystems ==
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/abf92fde-02ac-4622-9b26-82abf26a9708";
       fsType = "btrfs";
@@ -46,17 +48,15 @@
     [ { device = "/dev/disk/by-uuid/b99395c6-ad51-4c0c-8c3d-0f853ee0c90d"; }
     ];
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  # == Networking ==
   networking.useDHCP = lib.mkDefault true;
   networking.hostName = "beanmachine";
-  # networking.interfaces.enp4s0.useDHCP = lib.mkDefault true;
 
+  # == Bluetooth ==
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
+  # == Platform settings ==
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
