@@ -45,9 +45,6 @@
   };
 
   # ++ Power management ++
-  # Power profiles
-  services.tlp.enable = true;
-
   # Power button config
   services.logind = {
     powerKey = "suspend-then-hibernate";
