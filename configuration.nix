@@ -15,7 +15,7 @@
 
   # == Basic system/hardware config ==
 
-  # Enable sound with pipewire.
+  # ++ Audio and pipewire ++
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -32,6 +32,7 @@
     #media-session.enable = true;
   };
 
+  # ++ Graphics ++
   # Enable and configure openGL
   hardware.opengl = {
     enable = true;
@@ -43,15 +44,33 @@
     ];
   };
 
+  # ++ Power management ++
   # Power profiles
   services.tlp.enable = true;
 
+  # Power button config
+  services.logind = {
+    powerKey = "suspend-then-hibernate";
+    powerKeyLongPress = "poweroff";
+    lidSwitch = "suspend-then-hibernate"; # Default setting, just added for documentation
+    lidSwitchDocked = "suspend";
+    lidSwitchExternalPower = "suspend";
+  };
+
+  # Sleep settings
+  systemd.sleep.extraConfig = ''
+HibernateDelaySec=15m
+SuspendState=mem
+''
+
+  # ++ Boot and networking ++
   # systemd-boot bootloader
   boot.loader.systemd-boot.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # ++ Locale ++
   # Set your time zone.
   time.timeZone = "America/New_York";
 
