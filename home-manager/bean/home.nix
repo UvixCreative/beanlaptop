@@ -47,7 +47,7 @@ title_align center
   };
 
   qt = {
-    platformTheme = "gnome";
+    platformTheme.name = "adwaita";
     style.name = "adwaita-dark";
   };
 

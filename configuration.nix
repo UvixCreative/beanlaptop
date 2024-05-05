@@ -92,11 +92,11 @@ SuspendState=mem
   services.xserver.enable = true;
 
   # Enable SDDM and the KDE Plasma Desktop Environment
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    autoNumlock = true;
+  };
   services.xserver.desktopManager.plasma5.enable = true;
-
-  # Enable numlock at login
-  services.xserver.displayManager.sddm.autoNumlock = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -105,7 +105,7 @@ SuspendState=mem
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Enable Sway WM
   programs.sway = {
