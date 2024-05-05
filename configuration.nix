@@ -61,7 +61,7 @@
   systemd.sleep.extraConfig = ''
 HibernateDelaySec=15m
 SuspendState=mem
-''
+'';
 
   # ++ Boot and networking ++
   # systemd-boot bootloader
