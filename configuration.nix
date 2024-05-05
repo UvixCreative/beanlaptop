@@ -43,6 +43,9 @@
     ];
   };
 
+  # Power profiles
+  services.tlp.enable = true;
+
   # systemd-boot bootloader
   boot.loader.systemd-boot.enable = true;
 
