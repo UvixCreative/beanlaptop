@@ -16,8 +16,8 @@ let
   };
 
   monitors = rec {
-    primary = "DP-2";
-    secondary = "DP-1";
+    primary = "DP-3";
+    secondary = "eDP-2";
     left = secondary;
     right = primary;
   };
@@ -31,7 +31,10 @@ in rec {
       adaptive_sync = "on";
     };
     eDP-2 = {
-      scale = "1.35";
+      scale = "1.4";
+    };
+    DP-3 = {
+      mode = "2560x1440@143.973Hz";
     };
   };
   input = {
@@ -96,6 +99,14 @@ in rec {
     { app_id="pa_popup" ;}
     { app_id="com.nextcloud.desktopclient.nextcloud" ;}
   ];
+
+  assigns = {
+    "10" = [
+      { class = "discord"; }
+      { class = "Signal"; }
+      { app_id = "bluebubbles"; }
+    ];
+  };
 
   # System mode menu (poweroff, suspend, etc)
   modes = {
