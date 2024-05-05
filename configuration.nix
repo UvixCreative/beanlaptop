@@ -50,7 +50,7 @@
     powerKey = "suspend-then-hibernate";
     powerKeyLongPress = "poweroff";
     lidSwitch = "suspend-then-hibernate"; # Default setting, just added for documentation
-    lidSwitchDocked = "suspend";
+    lidSwitchDocked = "suspend-then-hibernate";
     lidSwitchExternalPower = "suspend";
   };
 
