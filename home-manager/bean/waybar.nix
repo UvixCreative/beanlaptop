@@ -48,6 +48,12 @@ in {
       format = "{}% ";
     };
 
+    "battery" = {
+      full-at = 80;
+      format = "{capacity}% {icon}";
+      format-icons = ["" "" "" "" ""];
+    };
+
     "network" = {
       format-wifi = "{essid} ({signalStrength}%) ";
       format-ethernet = "{ipaddr}/{cidr} ";

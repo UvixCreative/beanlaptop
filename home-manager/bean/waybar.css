@@ -70,7 +70,7 @@ window#waybar.PCSX2 #window {
 	border-radius: 26px;
 }
 
-#mode, #network, #bluetooth, #cpu, #memory, #pulseaudio, #clock {
+#mode, #network, #bluetooth, #cpu, #memory, #pulseaudio, #battery, #clock {
 	margin-top: 8px;
 	margin-left: 2px;
 	padding-left: 12px;
@@ -90,11 +90,15 @@ window#waybar.PCSX2 #window {
 }
 
 #bluetooth { 
-        background: #5af78e;
+        background: #5c99e0;
 }
 
 #pulseaudio {
 	background: #9aedfe;
+}
+
+#battery {
+	background: #5af78e;
 }
 
 #temperature {
@@ -113,3 +117,4 @@ window#waybar.PCSX2 #window {
         color: #f8f8f2;
 	background: #282a36;
 }	
+
