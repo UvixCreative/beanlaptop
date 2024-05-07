@@ -101,6 +101,14 @@ window#waybar.PCSX2 #window {
 	background: #5af78e;
 }
 
+#battery.critical {
+	background: #ff6e67;
+}
+
+#battery.charging {
+	background: #f1fa8c;
+}
+
 #temperature {
 	background: #5af78e;
 }

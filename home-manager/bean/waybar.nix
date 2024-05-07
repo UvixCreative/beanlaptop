@@ -52,6 +52,9 @@ in {
       full-at = 80;
       format = "{capacity}% {icon}";
       format-icons = ["" "" "" "" ""];
+      states = {
+        "critical" = 15;
+      };
     };
 
     "network" = {
