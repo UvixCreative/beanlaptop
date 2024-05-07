@@ -171,6 +171,8 @@ SuspendState=mem
      nextcloud-client
      calibre
      chromium
+     prismlauncher
+     vlc
   ];
 
   # Flatpak packages
