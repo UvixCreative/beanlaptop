@@ -173,6 +173,7 @@ SuspendState=mem
      chromium
      prismlauncher
      vlc
+     calf
   ];
 
   # Flatpak packages
