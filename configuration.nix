@@ -174,6 +174,7 @@ SuspendState=mem
      prismlauncher
      vlc
      lsp-plugins
+     calf
   ];
 
   # Flatpak packages
