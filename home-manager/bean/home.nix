@@ -29,7 +29,8 @@ title_align center
 
   services.swayidle = {
     events = [
-      { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock -f -l -c 000000" ; }
+      { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock -f -l -c 000000; ${pkgs.sway}/bin/sway output '*' power off" ; }
+      { event = "after-resume"; command = "${pkgs.sway}/bin/sway output '*' power on" ;}
     ];
     timeouts = [
       { timeout = 60; command = "${pkgs.light}/bin/light -O; ${pkgs.light}/bin/light -S 0"; resumeCommand = "${pkgs.light}/bin/light -I"; } # one minute, dim
