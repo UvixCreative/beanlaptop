@@ -175,6 +175,8 @@ SuspendState=mem
      vlc
      lsp-plugins
      calf
+     logseq
+     kdenlive
   ];
 
   # Flatpak packages
