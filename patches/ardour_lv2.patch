@@ -1,0 +1,15 @@
+diff --git a/libs/ardour/search_paths.cc b/libs/ardour/search_paths.cc
+index e6d8744..c75a5e2 100644
+--- a/libs/ardour/search_paths.cc
++++ b/libs/ardour/search_paths.cc
+@@ -128,6 +128,11 @@ lv2_bundled_search_path ()
+        Searchpath spath( ardour_dll_directory () );
+        spath.add_subdirectory_to_paths ("LV2");
+ 
++       spath.push_back ("/run/current-system/sw/lib/lv2");
++       spath.push_back (path_expand ("$HOME/.lv2"));
++       spath.push_back (path_expand ("$HOME/.nix-profile/lib/lv2"));
++       spath.push_back (path_expand ("/etc/profiles/per-user/$USER/lib/lv2"));
++
+        return spath;
+ }

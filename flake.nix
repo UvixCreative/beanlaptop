@@ -14,6 +14,15 @@
 		nixosConfigurations.beanmachine = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
+				({ config, pkgs, ... }: {
+					nixpkgs.overlays = [
+						(final: prev: {
+							ardour = prev.ardour.overrideAttrs (old: {
+								patches = old.patches ++ ./patches/ardour_lv2.patch;
+							});
+						})
+					];
+				})
 				nixos-hardware.nixosModules.framework-16-7040-amd
 				./configuration.nix
 				./machines/beanmachine.nix
