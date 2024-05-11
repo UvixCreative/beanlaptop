@@ -18,7 +18,7 @@
 					nixpkgs.overlays = [
 						(final: prev: {
 							ardour = prev.ardour.overrideAttrs (old: {
-								patches = old.patches ++ ./patches/ardour_lv2.patch;
+								patches = old.patches ++ [./patches/ardour_lv2.patch];
 							});
 						})
 					];
