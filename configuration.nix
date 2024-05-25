@@ -177,6 +177,9 @@ SuspendState=mem
      calf
      logseq
      kdenlive
+     inkscape
+     busybox
+     btop
   ];
 
   # Flatpak packages
