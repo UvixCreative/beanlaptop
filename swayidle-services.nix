@@ -12,10 +12,10 @@ in {
     enable = false;
     wantedBy = [ "default.target" ];
     description = "Swayidle timeouts for power saver mode";
-    documentation = "man:swayidle(1)"
+    documentation = "man:swayidle(1)";
     serviceConfig = {
         Type = "simple";
-        ExecStart = ''${swayidle} -w timeout 290 '${display_dim}' resume '${display_undim}' timeout 300 '${displays_off}' resume '${displays_on}' timeout 320 '${swaylock}; systemctl suspend' before-sleep '${displays_off}; ${swaylock}' after-resume '${displays_on}' ''
+        ExecStart = ''${swayidle} -w timeout 290 '${display_dim}' resume '${display_undim}' timeout 300 '${displays_off}' resume '${displays_on}' timeout 320 '${swaylock}; systemctl suspend' before-sleep '${displays_off}; ${swaylock}' after-resume '${displays_on}' '';
     };
   };
 }
