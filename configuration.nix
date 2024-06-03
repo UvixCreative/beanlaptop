@@ -121,6 +121,9 @@ SuspendState=mem
 
   # == User accounts and packages ==
 
+  # ++ User services ++
+  systemd.user.services = import ./swayidle-services.nix;
+
   # ++ Users ++
 
   users.users.bean = {
