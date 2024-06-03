@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   swayidle = "${pkgs.swayidle}/bin/swayidle";
@@ -7,8 +7,8 @@ let
   displays_off = "${pkgs.sway}/bin/sway output '*' power off";
   displays_on = "${pkgs.sway}/bin/sway output '*' power on";
   swaylock = "${pkgs.swaylock}/bin/swaylock -f -l -c 000000";
-in {
-  systemd.user.services.swayidle-powersaver = {
+in rec {
+  swayidle-powersaver = {
     enable = false;
     wantedBy = [ "default.target" ];
     description = "Swayidle timeouts for power saver mode";
