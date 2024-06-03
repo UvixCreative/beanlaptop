@@ -3,6 +3,7 @@
 let
   screenlock = "swaylock -f -l -c 000000";
   mode_system = "What to do? (l) lock, (e) logout, (r) reboot, (s) suspend, (Shift+s) shutdown";
+  mode_power = "Select a power profile: (s) Power saver, (b) Balanced, (p) Performance";
 
   screenshot_selected_area_clipboard = "slurp | grim -g- - | wl-copy";
   screenshot_full_clipboard = "grim - | wl-copy";
@@ -119,6 +120,14 @@ in rec {
       Escape = "mode default";
       Return = "mode default";
     };
+
+   ${mode_power} = {
+      s = "output eDP-2 mode 2560x1600@60Hz; exec powerprofilesctl set power-saver; exec systemctl --user start swayidle-powersaver.service; mode default";
+      b = "output eDP-2 mode 2560x1600@165Hz; exec powerprofilesctl set balanced; exec systemctl --user start swayidle-balanced.service; mode default";
+      p = "output eDP-2 mode 2560x1600@165Hz; exec powerprofilesctl set performance; exec systemctl --user start swayidle-performance.service; mode default";
+      Escape = "mode default";
+      Return = "mode default";
+    };
   };
 
   # Bar
@@ -140,6 +149,7 @@ in rec {
       "${modifier}+s" = "exec ${screenshot_full_clipboard}";
 
       "${modifier}+Shift+e" = "mode \"${mode_system}\"";
+      "${modifier}+Shift+p" = "mode \"${mode_power}\"";
 
       "${modifier}+b" = "exec 'pkill waybar || waybar'"; # Toggle bar
 
