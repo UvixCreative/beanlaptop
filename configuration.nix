@@ -9,6 +9,7 @@
   imports =
     [
       ./home-manager/home-manager.nix
+      ./swayidle-services.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -120,9 +121,6 @@ SuspendState=mem
   programs.light.enable = true;
 
   # == User accounts and packages ==
-
-  # ++ User services ++
-  systemd.user.services = import ./swayidle-services.nix;
 
   # ++ Users ++
 
