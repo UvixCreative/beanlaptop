@@ -55,7 +55,6 @@ bindgesture pinch:2:inward+right move right
   wayland.windowManager.sway.enable = true;
   services.kdeconnect.enable = true;
   programs.swayr.enable = true;
-  services.swayidle.enable = true;
   programs.waybar.enable = true;
   gtk.enable = true;
   qt.enable = true;
