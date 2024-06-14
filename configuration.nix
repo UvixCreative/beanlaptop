@@ -215,11 +215,10 @@ SuspendState=mem
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
-    ports = [ 1803 ];
   };
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 1803 ];
+  networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
 
   # == State version thing don't worry about it ==
