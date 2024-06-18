@@ -93,11 +93,17 @@ SuspendState=mem
   services.xserver.enable = true;
 
   # Enable SDDM and the KDE Plasma Desktop Environment
-  services.displayManager.sddm = {
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager = {
     enable = true;
-    autoNumlock = true;
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+      autoNumlock = true;
+      theme = "breeze";
+    };
+    defaultSession = "sway";
   };
-  services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
