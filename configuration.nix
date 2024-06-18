@@ -166,6 +166,7 @@ SuspendState=mem
      wofi
      swaynotificationcenter
      pavucontrol
+     wdisplays
      signal-desktop
      davinci-resolve
      rawtherapee
