@@ -49,7 +49,8 @@ in rec {
       tap_button_map = "lrm";
     };
   };
-  menu = "krunner";
+  menu = ''fuzzel --font="DejaVu Sans Monospace" -b 223322dd -s aaddaadd -S eeeeeeff -C 113311ff -t ddddddee -m bb99ddff -M 9922aaff'';
+  #menu = "krunner";
   gaps.outer = 4;
   gaps.inner = 4;
   gaps.smartGaps = true;

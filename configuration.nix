@@ -135,6 +135,7 @@ SuspendState=mem
     description = "Ben Rankin";
     extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
     packages = with pkgs; [
+      fuzzel
     ];
     shell = pkgs.fish;
   };
