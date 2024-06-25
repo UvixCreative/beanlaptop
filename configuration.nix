@@ -12,6 +12,9 @@
       ./swayidle-services.nix
     ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+                "electron-28.3.3"
+              ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # == Basic system/hardware config ==
@@ -35,9 +38,8 @@
 
   # ++ Graphics ++
   # Enable and configure openGL
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport.enable = true;
     extraPackages = with pkgs; [
       vaapiVdpau
       libvdpau-va-gl
