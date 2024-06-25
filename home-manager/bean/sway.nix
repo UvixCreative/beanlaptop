@@ -168,12 +168,11 @@ in rec {
 
   # Startup
   startup = [
-    { command = "krunner -d" ; always=true ;}
     { command = "/user/libexec/polkit-gnome-authentication-agent-1" ;}
     { command = "systemctl --user import-environment"; always=true ;}
     { command = "swaync --style /etc/sway/swaync/style.css --config /etc/sway/swaync/config.json"; always=true ;}
     { command = "swayrd" ; always=true ;}
-    { command = "kwalletd5" ; always=true ;}
+    { command = "kwalletd6" ; always=true ;}
     { command = "firefox" ;}
     { command = "discord" ;}
     { command = "nextcloud --background" ;}
