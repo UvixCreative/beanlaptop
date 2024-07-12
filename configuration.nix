@@ -13,7 +13,7 @@
     ];
 
   nixpkgs.config.permittedInsecurePackages = [
-                "electron-28.3.3"
+                "electron-27.3.11"
               ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -226,6 +226,15 @@ SuspendState=mem
   services.openssh = {
     enable = true;
   };
+
+  # Syncthing
+  services.syncthing = {
+    enable = true;
+    user = "bean";
+    dataDir = "/home/bean/syncthing";    # Default folder for new synced folders
+    configDir = "/home/bean/syncthing/.config/";   # Folder for Syncthing's settings and keys
+  };
+
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22 ];
