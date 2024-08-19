@@ -20,7 +20,6 @@
   # == Basic system/hardware config ==
 
   # ++ Audio and pipewire ++
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -191,6 +190,8 @@ SuspendState=mem
      inkscape
      busybox
      btop
+     gyroflow
+     flowblade
   ];
 
   # Flatpak packages

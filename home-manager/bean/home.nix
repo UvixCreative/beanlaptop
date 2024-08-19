@@ -42,7 +42,7 @@ bindgesture pinch:2:inward+right move right
   gtk = {
     theme = {
       name = "Adwaita-dark";
-      package = pkgs.gnome.gnome-themes-extra;
+      package = pkgs.gnome-themes-extra;
     };
   };
 
