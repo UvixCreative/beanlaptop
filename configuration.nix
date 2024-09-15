@@ -188,10 +188,11 @@ SuspendState=mem
      logseq
      kdenlive
      inkscape
+     gimp
      busybox
      btop
-     gyroflow
      flowblade
+     audacity
   ];
 
   # Flatpak packages
