@@ -179,7 +179,6 @@ SuspendState=mem
      davinci-resolve
      rawtherapee
      nextcloud-client
-     calibre
      chromium
      prismlauncher
      vlc
@@ -193,6 +192,7 @@ SuspendState=mem
      btop
      flowblade
      audacity
+     blender
   ];
 
   # Flatpak packages
