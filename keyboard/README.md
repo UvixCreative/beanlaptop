@@ -13,8 +13,8 @@ The top buttons set the layer. A single press will only set the layer for the ne
 |17|18|19|20|
 
 Examples:
-B + 1 = Change to power save mode, then return to numpad
-B + B = Change to Layer 1 (system macros). Do NOT return to numpad.
+- B + 1 = Change to power save mode, then return to numpad
+- B + B = Change to Layer 1 (system macros). Do NOT return to numpad.
 
 
 ## Layers
@@ -33,25 +33,25 @@ Activate with: B
 
 #### Power profiles
 
-1 = Power save mode
-2 = Balanced power mode
-3 = Performance power mode
-4 = Disable screen timeout
+- 1 = Power save mode
+- 2 = Balanced power mode
+- 3 = Performance power mode
+- 4 = Disable screen timeout
 
 #### Default audio out
 
-5 = Focusrite Scarlett 2i2
-6 = Speakers
-7 = HDMI
-8 = Audio jack
+- 5 = Focusrite Scarlett 2i2
+- 6 = Speakers
+- 7 = HDMI
+- 8 = Audio jack
 
 ### Layer 2: Discord
 
 Activate with: C
 
-1 = Mute
-2 = Deafen
-3 = Disconnect
+- 1 = Mute
+- 2 = Deafen
+- 3 = Disconnect
 
 These are literally mapped to F13, F14, and F15. You'll have to configure discord to use these F keys for the respective hotkey. Or change them up, I don't care, I'm not your dad.
 
