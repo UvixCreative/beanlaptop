@@ -180,7 +180,6 @@ SuspendState=mem
      rawtherapee
      nextcloud-client
      chromium
-     prismlauncher
      vlc
      lsp-plugins
      calf
@@ -193,6 +192,7 @@ SuspendState=mem
      flowblade
      audacity
      blender
+     alsa-utils
   ];
 
   # Flatpak packages
