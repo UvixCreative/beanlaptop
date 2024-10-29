@@ -4,6 +4,7 @@ let
   screenlock = "swaylock -f -l -c 000000";
   mode_system = "What to do? (l) lock, (e) logout, (r) reboot, (s) suspend, (Shift+s) shutdown";
   mode_power = "Select a power profile: (s) Power saver, (b) Balanced, (p) Performance, (d) Don't screen timeout";
+  mode_audio = "Select an audio output: (f) Focusrite Scarlett, (s) Speakers, (h) HDMI, (j) Audio Jack";
 
   screenshot_selected_area_clipboard = "slurp | grim -g- - | wl-copy";
   screenshot_full_clipboard = "grim - | wl-copy";
@@ -130,6 +131,16 @@ in rec {
       Escape = "mode default";
       Return = "mode default";
     };
+
+   ${mode_audio} = {
+      f = "exec pactl set-default-sink alsa_output.usb-Focusrite_Scarlett_2i2_USB_Y868Z9E9B8652D-00.Direct__Direct__sink; mode default";
+      s = "exec pactl set-default-sink alsa_output.pci-0000_c4_00.6.analog-stereo; mode default";
+      h = "exec pactl set-default-sink alsa_output.pci-0000_c4_00.1.hdmi-stereo-extra2; mode default";
+      j = "exec pactl set-default-sink alsa_output.usb-Framework_Audio_Expansion_Card-00.analog-stereo; mode default";
+      Escape = "mode default";
+      Return = "mode default";
+    };
+
   };
 
   # Bar
@@ -152,6 +163,7 @@ in rec {
 
       "${modifier}+Shift+e" = "mode \"${mode_system}\"";
       "${modifier}+Shift+p" = "mode \"${mode_power}\"";
+      "${modifier}+Shift+a" = "mode \"${mode_audio}\"";
 
       "${modifier}+b" = "exec 'pkill waybar || waybar'"; # Toggle bar
 
