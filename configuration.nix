@@ -193,6 +193,7 @@ SuspendState=mem
      audacity
      blender
      alsa-utils
+     emacs
   ];
 
   # Flatpak packages
