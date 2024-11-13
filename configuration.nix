@@ -162,7 +162,6 @@ SuspendState=mem
      discord
      ardour
      libreoffice
-     plasma-browser-integration
      git
      swayr
      nmap
@@ -189,11 +188,11 @@ SuspendState=mem
      gimp
      busybox
      btop
-     flowblade
      audacity
      blender
      alsa-utils
      emacs
+     wineWowPackages.waylandFull
   ];
 
   # Flatpak packages
