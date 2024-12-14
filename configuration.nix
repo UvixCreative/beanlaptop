@@ -192,7 +192,8 @@ SuspendState=mem
      blender
      alsa-utils
      emacs
-     wineWowPackages.waylandFull
+     remarkable-mouse
+     go
   ];
 
   # Flatpak packages
