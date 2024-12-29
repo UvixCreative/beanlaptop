@@ -175,7 +175,6 @@ SuspendState=mem
      pavucontrol
      wdisplays
      signal-desktop
-     davinci-resolve
      rawtherapee
      nextcloud-client
      chromium
@@ -183,7 +182,6 @@ SuspendState=mem
      lsp-plugins
      calf
      logseq
-     kdenlive
      inkscape
      gimp
      busybox
@@ -194,6 +192,7 @@ SuspendState=mem
      emacs
      remarkable-mouse
      go
+     openscad
   ];
 
   # Flatpak packages
