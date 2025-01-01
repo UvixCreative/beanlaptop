@@ -160,7 +160,7 @@ SuspendState=mem
      firefox
      kitty
      discord
-     ardour
+     #ardour
      libreoffice
      git
      swayr
