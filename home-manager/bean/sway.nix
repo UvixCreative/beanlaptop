@@ -133,9 +133,9 @@ in rec {
     };
 
    ${mode_audio} = {
-      f = "exec pactl set-default-sink alsa_output.usb-Focusrite_Scarlett_2i2_USB_Y868Z9E9B8652D-00.Direct__Direct__sink.4; mode default";
-      s = "exec pactl set-default-sink alsa_output.pci-0000_c4_00.6.analog-stereo.3; mode default";
-      h = "exec pactl set-default-sink alsa_output.pci-0000_c4_00.1.hdmi-stereo-extra2.2; mode default";
+      f = "exec pactl set-default-sink alsa_output.usb-Focusrite_Scarlett_2i2_USB_Y868Z9E9B8652D-00.Direct__Direct__sink; mode default";
+      s = "exec pactl set-default-sink alsa_output.pci-0000_c4_00.6.analog-stereo; mode default";
+      h = "exec pactl set-default-sink alsa_output.pci-0000_c4_00.1.hdmi-stereo-extra2; mode default";
       j = "exec pactl set-default-sink alsa_output.usb-Framework_Audio_Expansion_Card-00.analog-stereo; mode default";
       Escape = "mode default";
       Return = "mode default";
