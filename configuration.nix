@@ -191,8 +191,8 @@ SuspendState=mem
      alsa-utils
      emacs
      remarkable-mouse
-     go
      openscad
+     direnv
   ];
 
   # Flatpak packages

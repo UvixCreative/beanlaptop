@@ -59,4 +59,6 @@ bindgesture pinch:2:inward+right move right
   gtk.enable = true;
   qt.enable = true;
 
+  programs.fish.interactiveShellInit = "direnv hook fish | source";
+
 }
