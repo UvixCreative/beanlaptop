@@ -20,7 +20,7 @@
   # == Basic system/hardware config ==
 
   # ++ Audio and pipewire ++
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -157,14 +157,8 @@ SuspendState=mem
 
   # System nixpkgs packages
   environment.systemPackages = with pkgs; [
-     firefox
-     kitty
-     discord
-     #ardour
-     libreoffice
-     git
+     # Desktop
      swayr
-     nmap
      waybar
      slurp
      grim
@@ -172,27 +166,39 @@ SuspendState=mem
      font-awesome
      wofi
      swaynotificationcenter
-     pavucontrol
      wdisplays
-     signal-desktop
-     rawtherapee
      nextcloud-client
+
+     # Web/social
+     firefox
+     discord
      chromium
+     signal-desktop
+
+     # Utilities
+     git
+     nmap
+     pavucontrol
+     kitty
      vlc
-     lsp-plugins
-     calf
-     logseq
-     inkscape
-     gimp
      busybox
      btop
+     alsa-utils
+     remarkable-mouse
+     direnv
+
+     # Productivity
+     rawtherapee
+     libreoffice
+     inkscape
+     gimp
      audacity
      blender
-     alsa-utils
      emacs
-     remarkable-mouse
-     openscad
-     direnv
+     obsidian
+     #ardour
+     #lsp-plugins
+     #calf
   ];
 
   # Flatpak packages
