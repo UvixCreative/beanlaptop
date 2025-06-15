@@ -186,6 +186,7 @@ SuspendState=mem
      alsa-utils
      remarkable-mouse
      direnv
+     wineWowPackages.waylandFull # for reMarkable app, not nixified
 
      # Productivity
      rawtherapee
