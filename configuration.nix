@@ -43,6 +43,7 @@
       vaapiVdpau
       libvdpau-va-gl
       amdvlk
+      rocmPackages.clr.icd
     ];
   };
 
@@ -189,6 +190,7 @@ SuspendState=mem
      wineWowPackages.waylandFull # for reMarkable app, not nixified
 
      # Productivity
+     davinci-resolve
      rawtherapee
      libreoffice
      inkscape
@@ -196,6 +198,7 @@ SuspendState=mem
      audacity
      blender
      emacs
+     zotero
      obsidian
      #ardour
      #lsp-plugins
